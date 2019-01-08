@@ -1,0 +1,31 @@
+<div data-art-container="clipartGridContainer" class="art-grid-thumb col-xs-12 no-padding clipart-scroll">
+  <div 
+  *ngFor="let si of clipartImgs" 
+  class="col-xs-3 text-center no-padding art-frame-thumb-container" 
+  [attr.data-family-id]="si.FamilyId">
+    <div 
+    class="art-frame-thumb" 
+    title="Batman" 
+    [attr.data-selector]="'img-holder'" 
+    [attr.data-art-id]="si.Id">
+      <img class="dragImg img-responsive lazy" 
+      data-art-selector="category-option" 
+      [attr.data-original]="ThumbUrl+'/'+si.UniqueName+si.Extension"
+      [attr.id]="si.Id" 
+      [attr.data-id]="si.Id" 
+      [src]="ThumbUrl+'/'+si.UniqueName+si.Extension" 
+      alt="ProductViewsController"
+      [attr.data-url]="StandardUrl+'/'+si.UniqueName+si.Extension" 
+      [attr.type]="si.Source" 
+      [attr.data-width]="si.Width"
+      [attr.data-height]="si.Height" 
+      standard-width="0" 
+      standard-height="0" 
+      [attr.unique-name]="si.UniqueName"
+      [attr.data-family-id]="si.FamilyId">
+    </div>
+    <div 
+    class="art-caption is_truncate" 
+    [attr.title]="si.ImageName">{{ si.ImageName }}</div>
+  </div>
+</div>

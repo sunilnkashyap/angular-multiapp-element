@@ -1,0 +1,7 @@
+<ul class="art-grid">
+  <li *ngFor="let color of colorlist ;let i = index" id="{{color.ColorId}}" [attr.data-art-value]="color.ColorHexValue"
+    [attr.data-art-property]="textProperty" [attr.data-art-id]="color.ColorId" (click)="handleOnClickColorCell(color)"
+    [ngClass]="[ i == 0 ? 'color-picker-cell selected' : 'color-picker-cell']">
+    <a class="art-frame" href="#" [ngStyle]="{background:color.ColorHexValue}" [title]="color.ColorName" class="art-frame"></a>
+  </li>
+</ul>
